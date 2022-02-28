@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 # Text Input
 
 # save the input text in the variable 'name'

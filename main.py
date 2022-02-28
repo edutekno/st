@@ -7,8 +7,8 @@ import pandas as pd
 # second argument displays a default text inside the text input area
 #name = st.text_input("Enter Your name", "Type Here ...")
 
-weight = st.number_input("Enter Your weight", "Type Here ...")
-height = st.number_input("Enter Your height", "Type Here ...")
+weight = st.number_input('Weight', min_value=1, max_value=200, value=75, step=1)
+height = st.number_input('Height', min_value=1, max_value=200, value=75, step=1)
 x = weight/(height*height)
 if x < 18.5:
     result ='Underweight'

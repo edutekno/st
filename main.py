@@ -6,7 +6,7 @@ import pandas as pd
 # first argument shows the title of the text input box
 # second argument displays a default text inside the text input area
 #name = st.text_input("Enter Your name", "Type Here ...")
-
+st.header('BMI Calculator')
 weight = st.number_input('Weight', min_value=1, max_value=200, value=75, step=1)
 height = st.number_input('Height', value=100)
 x = weight/(height*height)

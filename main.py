@@ -12,3 +12,13 @@ name = st.text_input("Enter Your name", "Type Here ...")
 if(st.button('Submit')):
 	result = name.title()
 	st.success(result)
+st.title("Welcome to Streamlit!")
+
+st.write("Our first DataFrame")
+
+st.write(
+  pd.DataFrame({
+      'A': [1, 2, 3, 4],
+      'B': [5, 6, 7, 8]
+    })
+)

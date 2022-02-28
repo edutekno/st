@@ -9,7 +9,7 @@ import pandas as pd
 
 weight = st.text_input("Enter Your weight", "Type Here ...")
 height = st.text_input("Enter Your height", "Type Here ...")
-x = weight/float(height*height)
+x = weight/(height*height)
 if x < 18.5:
     result ='Underweight'
 if x>=18.5 and x<25:

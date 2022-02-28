@@ -1,3 +1,4 @@
+import streamlit as st
 # Text Input
 
 # save the input text in the variable 'name'

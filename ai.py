@@ -4,10 +4,10 @@ import streamlit as st
 import requests
 
 # Judul aplikasi
-st.title("FAQ AI Sederhana dengan API PHP")
+st.title("FAQ AI")
 
-# Input URL API PHP
-api_url = st.text_input("Masukkan URL API PHP:", "https://rumahguru.org/api/index.php")
+# URL API PHP sebagai konstanta
+API_URL = "https://rumahguru.org/api/index.php"
 
 # Input pertanyaan dari pengguna
 pertanyaan = st.text_area("Masukkan pertanyaan Anda:")
@@ -17,9 +17,7 @@ system_message = st.text_input("Pesan sistem (opsional):", "")
 
 # Tombol untuk mengirim pertanyaan
 if st.button("Kirim Pertanyaan"):
-    if not api_url:
-        st.error("Silakan masukkan URL API PHP terlebih dahulu.")
-    elif not pertanyaan:
+    if not pertanyaan:
         st.error("Silakan masukkan pertanyaan terlebih dahulu.")
     else:
         # Payload untuk permintaan POST
@@ -33,7 +31,7 @@ if st.button("Kirim Pertanyaan"):
             # Menampilkan loading spinner
             with st.spinner("Mengirim permintaan dan menunggu respons..."):
                 # Mengirim permintaan POST ke API PHP
-                response = requests.post(api_url, json=payload)
+                response = requests.post(API_URL, json=payload)
                 response.raise_for_status()  # Memastikan tidak ada error HTTP
 
             # Mengambil jawaban dari respons API

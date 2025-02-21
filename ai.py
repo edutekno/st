@@ -20,7 +20,7 @@ if st.button("Kirim Pertanyaan"):
         st.error("Silakan masukkan pertanyaan terlebih dahulu.")
     else:
         # Endpoint API Groq
-        url = "https://api.groq.com/v1/complete"  # Ganti dengan endpoint yang sesuai
+        url = "https://api.groq.com/openai/v1/chat/completions"  # Ganti dengan endpoint yang sesuai
         
         # Header untuk autentikasi
         headers = {

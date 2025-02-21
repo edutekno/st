@@ -30,9 +30,11 @@ if st.button("Kirim Pertanyaan"):
             payload["system"] = system_message
 
         try:
-            # Mengirim permintaan POST ke API PHP
-            response = requests.post(api_url, json=payload)
-            response.raise_for_status()  # Memastikan tidak ada error HTTP
+            # Menampilkan loading spinner
+            with st.spinner("Mengirim permintaan dan menunggu respons..."):
+                # Mengirim permintaan POST ke API PHP
+                response = requests.post(api_url, json=payload)
+                response.raise_for_status()  # Memastikan tidak ada error HTTP
 
             # Mengambil jawaban dari respons API
             data = response.json()

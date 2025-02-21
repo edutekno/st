@@ -9,11 +9,11 @@ st.title("FAQ AI")
 # URL API PHP sebagai konstanta
 API_URL = "https://rumahguru.org/api/index.php"
 
-# Input pertanyaan dari pengguna
-pertanyaan = st.text_area("Masukkan pertanyaan Anda:")
-
 # Input sistem (opsional)
 system_message = st.text_input("Pesan sistem (opsional):", "")
+
+# Input pertanyaan dari pengguna
+pertanyaan = st.text_area("Masukkan pertanyaan Anda:")
 
 # Tombol untuk mengirim pertanyaan
 if st.button("Kirim Pertanyaan"):
